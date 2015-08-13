@@ -15,8 +15,14 @@ build/
 [Bb]in/
 [Oo]bj/
 
-# Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
-!packages/*/build/
+# Ignore NuGet Packages
+*.nupkg
+
+# Ignore the packages folder
+**/packages/*
+
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
